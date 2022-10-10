@@ -21,6 +21,7 @@ body {
 a {
   text-decoration: none;
   display: inline-block;
+  color: inherit;
 }
 
 img{
@@ -33,5 +34,9 @@ button{
   border: none;
   outline: none;
   cursor: pointer;
+}
+
+ul{
+    list-style: none;
 }
 `;
