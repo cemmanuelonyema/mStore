@@ -1,5 +1,6 @@
 import React from 'react';
+import { StyledNotfound } from './StyledNotfound';
 
 export const NotFound = () => {
-  return <div>NotFound</div>;
+  return <StyledNotfound>NotFound</StyledNotfound>;
 };
