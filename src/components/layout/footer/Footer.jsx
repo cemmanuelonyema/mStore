@@ -7,7 +7,7 @@ export const Footer = () => {
       <div className="container">
         <div className="left">
           <div className="logo-box">
-            <img src="" alt="logo" className="logo-box__img" />
+            <img src="" alt="logo" classNameName="logo-box__img" />
           </div>
           <p className="left-text">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi,
@@ -40,24 +40,6 @@ export const Footer = () => {
 
         <StyledFooterNav>
           <ul className="nav-list">
-            <h4 className="nav-heading">Services</h4>
-            <li className="nav-item">
-              <a href="" className="nav-link">
-                Guide
-              </a>
-            </li>
-            <li className="nav-item">
-              <a href="" className="nav-link">
-                Planing
-              </a>
-            </li>
-            <li className="nav-item">
-              <a href="" className="nav-link">
-                Explore nature
-              </a>
-            </li>
-          </ul>
-          <ul className="nav-list">
             <h4 className="nav-heading">Company</h4>
             <li className="nav-item">
               <a href="" className="nav-link">
@@ -89,24 +71,26 @@ export const Footer = () => {
             </li>
             <li className="nav-item">
               <a href="" className="nav-link">
-                nse
+                Commitment
               </a>
             </li>
           </ul>
+          <div class="footer__cards">
+            <h4 class="footer__title">We accept all credit cards</h4>
+            <ul>
+              <li>
+                <img src="img/visa.png" alt="visa card" />
+              </li>
+              <li>
+                <img src="img/paypal.png" alt="paypal" />
+              </li>
+              <li>
+                <img src="img/mastercard.png" alt="mastercard" />
+              </li>
+            </ul>
+          </div>
         </StyledFooterNav>
       </div>
     </StyledFooter>
   );
 };
-
-// export const  () => {
-//   return (
-//     <lassName="
-//       <div className="container">
-
-//         <nav className="nav">
-//
-//         </nav>
-//       </div>
-//     </  );
-// };

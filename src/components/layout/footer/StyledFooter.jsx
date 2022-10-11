@@ -17,6 +17,7 @@ export const StyledFooter = styled.footer`
       flex-direction: column;
     }
   }
+
   .left {
     flex: 1.5;
 
@@ -38,6 +39,17 @@ export const StyledFooter = styled.footer`
         display: grid;
         place-content: center;
       }
+    }
+  }
+
+  .footer__cards {
+    ul {
+      display: flex;
+    }
+
+    li {
+      margin: 1rem 1.5rem 1.5rem 0;
+      width: 5rem;
     }
   }
 `;
