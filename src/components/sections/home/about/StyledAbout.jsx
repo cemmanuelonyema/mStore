@@ -12,10 +12,19 @@ export const StyledAbout = styled.section`
     grid-template-columns: repeat(2, 1fr);
     gap: 3.2rem;
 
+    @media screen and (max-width: 37.5em) {
+      grid-template-columns: 1fr;
+      grid-auto-flow: dense;
+    }
+
     .about__content {
       display: flex;
       flex-direction: column;
       gap: 2rem;
+
+      @media screen and (max-width: 37.5em) {
+        order: -1;
+      }
     }
   }
 `;

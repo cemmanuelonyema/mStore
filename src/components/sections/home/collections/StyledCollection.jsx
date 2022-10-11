@@ -13,6 +13,11 @@ export const StyledCollections = styled.section`
     grid-template-columns: repeat(6, minmax(min-content, 120rem));
     gap: 2rem;
 
+    @media screen and (max-width: 37.5em) {
+      display: flex;
+      flex-direction: column;
+    }
+
     .col-box {
       padding: 2rem;
       border: 1px solid black;

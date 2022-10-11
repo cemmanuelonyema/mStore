@@ -5,6 +5,7 @@ export const Collections = () => {
   return (
     <StyledCollections>
       <div className="container">
+        <h2>Collections</h2>
         <div className="col-box col-box--1">1</div>
         <div className="col-box col-box--2">2</div>
         <div className="col-box col-box--3">3</div>
