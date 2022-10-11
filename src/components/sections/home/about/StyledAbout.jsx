@@ -7,5 +7,15 @@ export const StyledAbout = styled.section`
     max-width: 120rem;
     margin: 0 auto;
     padding: 3rem;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3.2rem;
+
+    .about__content {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
   }
 `;

@@ -8,5 +8,11 @@ export const StyledFaq = styled.section`
     max-width: 120rem;
     margin: 0 auto;
     padding: 3rem;
+
+    .content {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 3.2rem;
+    }
   }
 `;
