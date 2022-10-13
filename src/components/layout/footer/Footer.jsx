@@ -79,13 +79,13 @@ export const Footer = () => {
             <h4 className="footer__title">We accept all credit cards</h4>
             <ul>
               <li>
-                <img src="img/visa.png" alt="visa card" />
+                <img src="/img/visa.png" alt="visa card" />
               </li>
               <li>
-                <img src="img/paypal.png" alt="paypal" />
+                <img src="/img/paypal.png" alt="paypal" />
               </li>
               <li>
-                <img src="img/mastercard.png" alt="mastercard" />
+                <img src="/img/mastercard.png" alt="mastercard" />
               </li>
             </ul>
           </div>
