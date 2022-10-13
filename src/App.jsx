@@ -9,6 +9,7 @@ import { NotFound } from './pages/notFound/NotFound';
 import { Shop } from './pages/shop/Shop';
 import { Checkout } from './pages/checkout/Checkout';
 import { Collection } from './pages/collection/Collection';
+import { Detail } from './pages/detail/Detail';
 
 export const App = () => {
   return (
@@ -20,6 +21,7 @@ export const App = () => {
           <Route path="shop" element={<Shop />}>
             <Route path=":collectionItem" element={<Collection />} />
           </Route>
+          <Route path="productDetail/:productItem" element={<Detail />} />
           <Route path="checkout" element={<Checkout />} />
 
           <Route index path="*" element={<NotFound />} />
