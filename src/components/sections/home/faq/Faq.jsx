@@ -34,15 +34,15 @@ export const Faq = () => {
         <h2> Some frequently asked common questions </h2>
         <div className="content">
           {questions.map(({ id, title, answer }) => (
-            <div class="question__group" key={id}>
-              <div class="question__item">
-                <header class="questions_header">
+            <div className="question__group" key={id}>
+              <div className="question__item">
+                <header className="questions_header">
                   <span>icon</span>
-                  <h3 class="question__item-title">{title}</h3>
+                  <h3 className="question__item-title">{title}</h3>
                 </header>
 
-                <div class="question__content">
-                  <p class="question__answer">{answer}</p>
+                <div className="question__content">
+                  <p className="question__answer">{answer}</p>
                 </div>
               </div>
             </div>

@@ -1,40 +1,61 @@
 import styled from 'styled-components';
 
 export const StyledCollections = styled.section`
-  border: 2px solid black;
-  padding: 1rem;
-
   .container {
     max-width: 120rem;
     margin: 0 auto;
     padding: 3rem;
 
-    display: grid;
-    grid-template-columns: repeat(6, minmax(min-content, 120rem));
-    gap: 2rem;
+    h2 {
+      margin-bottom: 2rem;
+    }
 
-    @media screen and (max-width: 37.5em) {
-      display: flex;
-      flex-direction: column;
+    .cols-content {
+      display: grid;
+      grid-template-columns: repeat(6, minmax(min-content, 120rem));
+      grid-template-rows: 25rem 25rem;
+      gap: 2rem;
+
+      @media screen and (max-width: 37.5em) {
+        display: flex;
+        flex-direction: column;
+      }
     }
 
     .col-box {
-      padding: 2rem;
-      border: 1px solid black;
+      position: relative;
+
+      button {
+        width: 100%;
+        padding: 1.6rem;
+        background-color: black;
+        color: white;
+        font-weight: bold;
+        position: absolute;
+        bottom: 30px;
+        left: 0;
+        opacity: 0;
+        z-index: 10;
+        transition: all 0.3s;
+        transform: translateY(1.6rem);
+      }
+      &:hover {
+        button {
+          transform: translateY(0px);
+          opacity: 1;
+        }
+      }
 
       &--1 {
-        grid-column: 1/3;
-      }
-      &--2 {
-        grid-column: 3/5;
-      }
-      &--3 {
-        grid-column: 5/7;
-      }
-      &--4 {
         grid-column: 1/4;
+        grid-row: 1/3;
       }
-      &--5 {
+
+      &--2 {
+        grid-column: 4/7;
+      }
+
+      &--3 {
         grid-column: 4/7;
       }
     }

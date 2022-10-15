@@ -7,7 +7,7 @@ export const Footer = () => {
       <div className="container">
         <div className="left">
           <div className="logo-box">
-            <img src="" alt="logo" classNameName="logo-box__img" />
+            <img src="" alt="logo" className="logo-box__img" />
           </div>
           <p className="left-text">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi,
@@ -75,17 +75,17 @@ export const Footer = () => {
               </a>
             </li>
           </ul>
-          <div class="footer__cards">
-            <h4 class="footer__title">We accept all credit cards</h4>
+          <div className="footer__cards">
+            <h4 className="footer__title">We accept all credit cards</h4>
             <ul>
               <li>
-                <img src="img/visa.png" alt="visa card" />
+                <img src="/img/visa.png" alt="visa card" />
               </li>
               <li>
-                <img src="img/paypal.png" alt="paypal" />
+                <img src="/img/paypal.png" alt="paypal" />
               </li>
               <li>
-                <img src="img/mastercard.png" alt="mastercard" />
+                <img src="/img/mastercard.png" alt="mastercard" />
               </li>
             </ul>
           </div>
