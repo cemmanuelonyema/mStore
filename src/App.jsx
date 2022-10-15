@@ -7,6 +7,8 @@ import { GlobalStyle } from './style/GlobalStyle';
 import { Home } from './pages/home/Home';
 import { NotFound } from './pages/notFound/NotFound';
 import { Shop } from './pages/shop/Shop';
+import { Checkout } from './pages/checkout/Checkout';
+import { Collection } from './pages/collection/Collection';
 
 export const App = () => {
   return (
@@ -15,7 +17,10 @@ export const App = () => {
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index path="/" element={<Home />} />
-          <Route index path="shop" element={<Shop />} />
+          <Route path="shop" element={<Shop />}>
+            <Route path=":collectionItem" element={<Collection />} />
+          </Route>
+          <Route path="checkout" element={<Checkout />} />
 
           <Route index path="*" element={<NotFound />} />
         </Route>
