@@ -27,6 +27,7 @@ export const StyledAuthNav = styled.nav`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: relative;
 
   max-width: 120rem;
   margin: 0 auto;

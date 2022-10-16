@@ -7,16 +7,21 @@ import { FiShoppingCart } from 'react-icons/fi';
 //local files import
 import { StyledAuthNav, StyledHeader, StyledNav } from './StyledNav';
 import {
-  selectCart,
+  selectCartHidden,
+  selectShopPageActive,
   shopPageActive,
   shopPageInActive,
+  toggleCartHidden,
 } from '../../../redux/slices/cartSlice';
+import { CartDropDown } from '../../cart/cartDropDown/CartDropDown';
 
 //component
 export const Nav = () => {
+  const isCartHidden = useSelector(selectCartHidden);
+  const isShopPageActive = useSelector(selectShopPageActive);
+
   //hooks
   const dispatch = useDispatch();
-  const { isShopPageActive } = useSelector(selectCart);
 
   //return jsx
   return (
@@ -33,7 +38,7 @@ export const Nav = () => {
 
           <ul>
             <li>
-              <Link>
+              <Link onClick={() => dispatch(toggleCartHidden())}>
                 <FiShoppingCart className="icon" />
                 <span>8</span>
               </Link>
@@ -42,6 +47,7 @@ export const Nav = () => {
               <a href="">Sign Up</a>
             </li>
           </ul>
+          {isCartHidden ? null : <CartDropDown />}
         </StyledAuthNav>
       ) : (
         <StyledNav>
@@ -56,7 +62,7 @@ export const Nav = () => {
             <li>
               <a href="">About</a>
             </li>
-            <li>
+            {/* <li>
               <a href="">Collections</a>
             </li>
             <li>
@@ -64,7 +70,7 @@ export const Nav = () => {
             </li>
             <li>
               <a href="">Contact us</a>
-            </li>
+            </li> */}
             <Link
               to="/shop"
               className="btn shop"
