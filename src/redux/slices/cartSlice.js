@@ -37,9 +37,11 @@ export const {
 } = cartSlice.actions;
 export default cartSlice.reducer;
 
+/****************************************************************************************************/
 /************************************************** */
 //selectors
 /************************************************** */
+/*************************************************************************************************** */
 
 export const selectCart = (state) => state.cart;
 
@@ -63,13 +65,24 @@ export const selectCartItemsCount = createSelector(
     )
 );
 
+export const selectCartTotal = createSelector([selectCartItems], (cartItems) =>
+  cartItems.reduce(
+    (accumulatedQuantity, cartItem) =>
+      accumulatedQuantity + cartItem.quantity * cartItem.price,
+    0
+  )
+);
+
 export const selectShopPageActive = createSelector(
   [selectCart],
   (cart) => cart.isShopPageActive
 );
+
+/*************************************************************************************************** */
 /************************************************** */
 //utility functions
 /************************************************** */
+/*************************************************************************************************** */
 const addItemToCart = (cartItems, cartItemToAdd) => {
   //check for existing item
   const existingCartItem = cartItems.find(
