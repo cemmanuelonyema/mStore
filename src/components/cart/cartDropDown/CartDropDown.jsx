@@ -5,6 +5,7 @@ import {
   selectCartItems,
   toggleCartHidden,
 } from '../../../redux/slices/cartSlice';
+import { CartItem } from '../cartItem/CartItem';
 import { StyledCartDropDown } from './StyledCartDropDown';
 
 export const CartDropDown = () => {
@@ -25,7 +26,9 @@ export const CartDropDown = () => {
       <span className="cartHeader">Cart</span>
       <div className="cartItems">
         {cartItems.length ? (
-          ''
+          cartItems?.map((cartItem) => (
+            <CartItem key={cartItem.id} item={cartItem} />
+          ))
         ) : (
           <span className="empty-message">Your cart is empty </span>
         )}

@@ -20,10 +20,13 @@ export const StyledCartDropDown = styled.article`
 
   .cartItems {
     padding: 2.4rem;
+    border: 1px solid black;
+    /* margin: 2.4rem; */
     height: 25rem;
     display: flex;
     flex-direction: column;
-    overflow: auto;
+    /* overflow: auto; */
+    overflow-y: scroll;
     margin-bottom: 1rem;
   }
 `;

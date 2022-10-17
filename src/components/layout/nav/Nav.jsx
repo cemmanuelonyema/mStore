@@ -8,6 +8,8 @@ import { FiShoppingCart } from 'react-icons/fi';
 import { StyledAuthNav, StyledHeader, StyledNav } from './StyledNav';
 import {
   selectCartHidden,
+  selectCartItems,
+  selectCartItemsCount,
   selectShopPageActive,
   shopPageActive,
   shopPageInActive,
@@ -19,6 +21,7 @@ import { CartDropDown } from '../../cart/cartDropDown/CartDropDown';
 export const Nav = () => {
   const isCartHidden = useSelector(selectCartHidden);
   const isShopPageActive = useSelector(selectShopPageActive);
+  const itemsCount = useSelector(selectCartItemsCount);
 
   //hooks
   const dispatch = useDispatch();
@@ -40,7 +43,7 @@ export const Nav = () => {
             <li>
               <Link onClick={() => dispatch(toggleCartHidden())}>
                 <FiShoppingCart className="icon" />
-                <span>8</span>
+                <span>{itemsCount}</span>
               </Link>
             </li>
             <li>
