@@ -1,14 +1,18 @@
 //dependencies import
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { FiShoppingCart } from 'react-icons/fi';
 
 //local files import
-import { StyledAuthNav, StyledHeader, StyledNav } from './StyledNav';
+import {
+  StyledAuthNav,
+  StyledHeader,
+  StyledNav,
+  StyledNavIcon,
+} from './StyledNav';
 import {
   selectCartHidden,
-  selectCartItems,
   selectCartItemsCount,
   selectShopPageActive,
   shopPageActive,
@@ -16,6 +20,10 @@ import {
   toggleCartHidden,
 } from '../../../redux/slices/cartSlice';
 import { CartDropDown } from '../../cart/cartDropDown/CartDropDown';
+import {
+  selectNavActive,
+  updateNavStatus,
+} from '../../../redux/slices/appSlice';
 
 //component
 export const Nav = () => {
@@ -25,6 +33,7 @@ export const Nav = () => {
 
   //hooks
   const dispatch = useDispatch();
+  const isNavActive = useSelector(selectNavActive);
 
   //return jsx
   return (
@@ -39,7 +48,7 @@ export const Nav = () => {
             <img src="" alt="logo" />
           </Link>
 
-          <ul>
+          <ul className={` ${isNavActive ? 'open' : ''} `}>
             <li>
               <Link onClick={() => dispatch(toggleCartHidden())}>
                 <FiShoppingCart className="icon" />
@@ -49,6 +58,7 @@ export const Nav = () => {
             <li>
               <a href="">Sign Up</a>
             </li>
+            <NavIcon />
           </ul>
           {isCartHidden ? null : <CartDropDown />}
         </StyledAuthNav>
@@ -61,11 +71,11 @@ export const Nav = () => {
           >
             <img src="" alt="logo" />
           </Link>
-          <ul>
+          <ul className={` ${isNavActive ? 'open' : ''} `}>
             <li>
               <a href="">About</a>
             </li>
-            {/* <li>
+            <li>
               <a href="">Collections</a>
             </li>
             <li>
@@ -73,7 +83,7 @@ export const Nav = () => {
             </li>
             <li>
               <a href="">Contact us</a>
-            </li> */}
+            </li>
             <Link
               to="/shop"
               className="btn shop"
@@ -82,8 +92,27 @@ export const Nav = () => {
               Shop Now
             </Link>
           </ul>
+          <NavIcon />
         </StyledNav>
       )}
     </StyledHeader>
+  );
+};
+
+const NavIcon = () => {
+  const dispatch = useDispatch();
+
+  const isNavActive = useSelector(selectNavActive);
+  console.log(isNavActive);
+
+  return (
+    <div
+      onClick={() => dispatch(updateNavStatus())}
+      className={`menuIcon ${isNavActive ? 'open' : ''} `}
+    >
+      <span className="menuIcon__bar menuIcon__bar--1"></span>
+      <span className="menuIcon__bar menuIcon__bar--2"></span>
+      <span className="menuIcon__bar menuIcon__bar--3"></span>
+    </div>
   );
 };
