@@ -44,6 +44,15 @@ export const StyledNav = styled.nav`
 `;
 
 export const StyledHeader = styled.header`
+  position: fixed;
+  width: 100%;
+  z-index: 20;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  background-color: #fff;
+
   .menuIcon {
     width: 6rem;
     height: 6rem;
@@ -116,21 +125,8 @@ export const StyledAuthNav = styled.nav`
   ul {
     display: flex;
     align-items: center;
-    .i {
-      flex-direction: column;
-      align-items: flex-start;
-      width: 70%;
-      height: 100%;
-      background-color: var(--black);
-      color: var(--white);
-      position: fixed;
-      top: 0;
-      right: -100%;
-      //   border: 5px solid black;
-      padding: 0 2rem;
-      transition: all ease-in-out 0.5s;
-    }
   }
+
   a {
     padding: 1rem;
     position: relative;

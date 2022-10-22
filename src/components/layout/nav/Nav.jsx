@@ -1,16 +1,11 @@
 //dependencies import
-import React, { useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { FiShoppingCart } from 'react-icons/fi';
 
 //local files import
-import {
-  StyledAuthNav,
-  StyledHeader,
-  StyledNav,
-  StyledNavIcon,
-} from './StyledNav';
+import { StyledAuthNav, StyledHeader, StyledNav } from './StyledNav';
 import {
   selectCartHidden,
   selectCartItemsCount,
@@ -27,13 +22,14 @@ import {
 
 //component
 export const Nav = () => {
+  //selector hooks
   const isCartHidden = useSelector(selectCartHidden);
   const isShopPageActive = useSelector(selectShopPageActive);
   const itemsCount = useSelector(selectCartItemsCount);
+  const isNavActive = useSelector(selectNavActive);
 
   //hooks
   const dispatch = useDispatch();
-  const isNavActive = useSelector(selectNavActive);
 
   //return jsx
   return (
@@ -58,7 +54,6 @@ export const Nav = () => {
             <li>
               <a href="">Sign Up</a>
             </li>
-            <NavIcon />
           </ul>
           {isCartHidden ? null : <CartDropDown />}
         </StyledAuthNav>
