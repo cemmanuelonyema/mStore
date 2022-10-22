@@ -3,7 +3,7 @@ import { StyledNewsletter } from './StyledNewsletter';
 
 export const Newsletter = () => {
   return (
-    <StyledNewsletter>
+    <StyledNewsletter id="newsletter">
       <div className="container">Newsletter</div>
     </StyledNewsletter>
   );

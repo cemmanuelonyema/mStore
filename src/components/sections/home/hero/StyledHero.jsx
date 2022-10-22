@@ -2,7 +2,8 @@ import styled from 'styled-components';
 
 export const StyledHero = styled.section`
   border: 1px solid black;
-  padding: 1rem;
+  margin-top: 10rem;
+  /* padding-top: 25rem; */
 
   .container {
     max-width: 120rem;

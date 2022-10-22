@@ -31,6 +31,9 @@ export const Nav = () => {
   //hooks
   const dispatch = useDispatch();
 
+  //funcs
+  const handleNavToggle = () => dispatch(updateNavStatus());
+
   //return jsx
   return (
     <StyledHeader>
@@ -45,13 +48,13 @@ export const Nav = () => {
           </Link>
 
           <ul className={` ${isNavActive ? 'open' : ''} `}>
-            <li>
+            <li onClick={handleNavToggle}>
               <Link onClick={() => dispatch(toggleCartHidden())}>
                 <FiShoppingCart className="icon" />
                 <span>{itemsCount}</span>
               </Link>
             </li>
-            <li>
+            <li onClick={handleNavToggle}>
               <a href="">Sign Up</a>
             </li>
           </ul>
@@ -67,17 +70,17 @@ export const Nav = () => {
             <img src="" alt="logo" />
           </Link>
           <ul className={` ${isNavActive ? 'open' : ''} `}>
-            <li>
-              <a href="">About</a>
+            <li onClick={handleNavToggle}>
+              <a href="#about">About</a>
             </li>
-            <li>
-              <a href="">Collections</a>
+            <li onClick={handleNavToggle}>
+              <a href="#collections">Collections</a>
             </li>
-            <li>
-              <a href="">Newsletter</a>
+            <li onClick={handleNavToggle}>
+              <a href="#newsletter">Newsletter</a>
             </li>
-            <li>
-              <a href="">Contact us</a>
+            <li onClick={handleNavToggle}>
+              <a href="#contact">Contact us</a>
             </li>
             <Link
               to="/shop"
@@ -96,9 +99,7 @@ export const Nav = () => {
 
 const NavIcon = () => {
   const dispatch = useDispatch();
-
   const isNavActive = useSelector(selectNavActive);
-  console.log(isNavActive);
 
   return (
     <div

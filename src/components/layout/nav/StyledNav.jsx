@@ -24,8 +24,8 @@ export const StyledNav = styled.nav`
       position: fixed;
       top: 0;
       right: -100%;
-      //   border: 5px solid black;
       padding: 0 2rem;
+      padding-top: 15rem;
       transition: all ease-in-out 0.5s;
       z-index: 100;
     }
@@ -33,6 +33,10 @@ export const StyledNav = styled.nav`
 
   ul.open {
     right: 0;
+  }
+
+  ul.open body {
+    overflow: hidden;
   }
 
   a {

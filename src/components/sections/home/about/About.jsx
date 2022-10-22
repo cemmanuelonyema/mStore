@@ -3,7 +3,7 @@ import { StyledAbout } from './StyledAbout';
 
 export const About = () => {
   return (
-    <StyledAbout>
+    <StyledAbout id="about">
       <div className="container">
         <div className="about__image">
           <img src="" alt="about us image" />

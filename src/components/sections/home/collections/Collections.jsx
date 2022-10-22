@@ -17,7 +17,7 @@ export const Collections = () => {
     },
   ];
   return (
-    <StyledCollections>
+    <StyledCollections id="collections">
       <div className="container">
         <h2>Collections</h2>
         <div className="cols-content">
@@ -27,25 +27,6 @@ export const Collections = () => {
               <button>View collection </button>
             </Link>
           ))}
-
-          {/* <div className="col-box col-box--1">
-            <img
-              src="../../../../../public/img/pexels-subhan-saad-3613388.jpg"
-              alt="collection image"
-            />{' '}
-          </div>
-          <div className="col-box col-box--2">
-            <img
-              src="../../../../../public/img/pexels-fernando-arcos-190819.jpg"
-              alt="collection image"
-            />
-          </div>
-          <div className="col-box col-box--3">
-            <img
-              src="../../../../../public/img/maxim-hopman-8cT5ja0P_N4-unsplash.jpg"
-              alt="collection image"
-            />
-          </div> */}
         </div>
       </div>
     </StyledCollections>
