@@ -1,4 +1,10 @@
 import React from 'react';
+import { FiChevronDown, FiChevronRight, FiChevronLeft } from 'react-icons/fi';
+import { useDispatch, useSelector } from 'react-redux';
+import {
+  selectFaqActive,
+  updateFaqStatus,
+} from '../../../../redux/slices/appSlice';
 import { StyledFaq } from './StyledFaq';
 
 export const Faq = () => {
@@ -28,22 +34,30 @@ export const Faq = () => {
         'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio adipisci quo aliquid repellendus cupiditate eum                 architecto magni! Natus, rem aliquid.',
     },
   ];
+  const dispatch = useDispatch();
+  const isFaqOpen = useSelector(selectFaqActive);
+  console.log(isFaqOpen);
+  //functions
+  const handleFaqToggle = () => dispatch(updateFaqStatus());
   return (
     <StyledFaq>
       <div className="container">
         <h2> Some frequently asked common questions </h2>
         <div className="content">
           {questions.map(({ id, title, answer }) => (
-            <div className="question__group" key={id}>
-              <div className="question__item">
-                <header className="questions_header">
-                  <span>icon</span>
-                  <h3 className="question__item-title">{title}</h3>
-                </header>
+            <div
+              className={`question__group ${isFaqOpen ? 'open' : ''}`}
+              key={id}
+            >
+              <header className="question__header" onClick={handleFaqToggle}>
+                {isFaqOpen ? <FiChevronDown /> : <FiChevronRight />}
 
-                <div className="question__content">
-                  <p className="question__answer">{answer}</p>
-                </div>
+                {/* <FiChevronLeft /> */}
+                <h3 className="question__item-title">{title}</h3>
+              </header>
+
+              <div className="question__content">
+                <p className="question__answer">{answer}</p>
               </div>
             </div>
           ))}

@@ -2,6 +2,7 @@ import { createSlice, createSelector } from '@reduxjs/toolkit';
 
 const initialState = {
   isNavActive: false,
+  isFaqOpen: false,
 };
 
 export const appSlice = createSlice({
@@ -11,10 +12,13 @@ export const appSlice = createSlice({
     updateNavStatus(state) {
       state.isNavActive = !state.isNavActive;
     },
+    updateFaqStatus(state) {
+      state.isFaqOpen = !state.isFaqOpen;
+    },
   },
 });
 
-export const { updateNavStatus } = appSlice.actions;
+export const { updateNavStatus, updateFaqStatus } = appSlice.actions;
 export default appSlice.reducer;
 
 /****************************************************************************************************/
@@ -27,5 +31,10 @@ export const selectApp = (state) => state.app;
 
 export const selectNavActive = createSelector(
   [selectApp],
-  (cart) => cart.isNavActive
+  (app) => app.isNavActive
+);
+
+export const selectFaqActive = createSelector(
+  [selectApp],
+  (app) => app.isFaqOpen
 );
