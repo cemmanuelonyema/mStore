@@ -11,3 +11,7 @@ export const StyledHero = styled.section`
     padding: 3rem;
   }
 `;
+
+
+export const Content = styled.div``
+export const Images = styled.div``

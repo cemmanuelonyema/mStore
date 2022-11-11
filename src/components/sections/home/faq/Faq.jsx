@@ -1,5 +1,5 @@
 import React from 'react';
-import { FiChevronDown, FiChevronRight, FiChevronLeft } from 'react-icons/fi';
+import { FiChevronDown, FiChevronRight } from 'react-icons/fi';
 import { useDispatch, useSelector } from 'react-redux';
 import {
   selectFaqActive,
@@ -34,32 +34,36 @@ export const Faq = () => {
         'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio adipisci quo aliquid repellendus cupiditate eum                 architecto magni! Natus, rem aliquid.',
     },
   ];
+
   const dispatch = useDispatch();
   const isFaqOpen = useSelector(selectFaqActive);
   console.log(isFaqOpen);
   //functions
-  const handleFaqToggle = () => dispatch(updateFaqStatus());
+  const handleFaqToggle = (e) => {
+    console.log(e);
+    dispatch(updateFaqStatus());
+  };
   return (
     <StyledFaq>
       <div className="container">
         <h2> Some frequently asked common questions </h2>
+
         <div className="content">
           {questions.map(({ id, title, answer }) => (
-            <div
+            <article
               className={`question__group ${isFaqOpen ? 'open' : ''}`}
               key={id}
             >
               <header className="question__header" onClick={handleFaqToggle}>
                 {isFaqOpen ? <FiChevronDown /> : <FiChevronRight />}
 
-                {/* <FiChevronLeft /> */}
                 <h3 className="question__item-title">{title}</h3>
               </header>
 
               <div className="question__content">
                 <p className="question__answer">{answer}</p>
               </div>
-            </div>
+            </article>
           ))}
         </div>
       </div>
