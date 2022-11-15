@@ -4,6 +4,7 @@ export const StyledHero = styled.section`
   border: 1px solid black;
   margin-top: 10rem;
   /* padding-top: 25rem; */
+  visibility: hidden;
 
   .container {
     max-width: 120rem;
@@ -16,7 +17,7 @@ export const StyledHero = styled.section`
     align-items: center;
     justify-content: space-between;
     margin: 0 24px;
-    height: 100vh;
+    /* height: 100vh; */
   }
 `;
 
@@ -35,6 +36,9 @@ export const Content = styled.div`
     .line {
       height: 45px;
       overflow: hidden;
+    }
+    span {
+      display: block;
     }
 
     p {
@@ -73,8 +77,8 @@ export const Images = styled.div`
     position: absolute;
 
     &--1 {
-      top: 0;
-      right: 0;
+      top: 0px;
+      right: 0px;
       width: 45%;
       height: 50%;
     }
@@ -84,6 +88,14 @@ export const Images = styled.div`
       left: 0px;
       width: 52%;
       height: 60%;
+    }
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      width: 100%;
     }
   }
 `;
