@@ -5,7 +5,7 @@ import { Content, Images, StyledHero } from './StyledHero';
 export const Hero = () => {
   let app = useRef(null);
   let images = useRef(null);
-  let tl = gsap.timeline();
+  let tl = gsap.timeline({ delay: 0.6 });
   let content = useRef(null);
 
   useEffect(() => {
@@ -87,30 +87,7 @@ export const Hero = () => {
         { delay: 2.2, y: 20, duration: 1, opacity: 0, ease: 'power4.inOut' },
         ' +=1.6'
       );
-
-    // tl.from(img1, {
-    //   opacity: 0,
-    //   duration: 2.6,
-    //   y: 1200,
-    //   ease: 'power4.inOut',
-    // })
-    //   .from(img1.firstElementChild, {
-    //     duration: 2,
-    //     scale: 1.6,
-    //     ease: 'power4.inOut',
-    //   })
-    //   .from(img2, {
-    //     opacity: 0,
-    //     duration: 2.6,
-    //     y: 1200,
-    //     ease: 'power4.inOut',
-    //   })
-    //   .from(img2.firstElementChild, {
-    //     duration: 2,
-    //     scale: 1.6,
-    //     ease: 'power4.inOut',
-    //   });
-  }, []);
+  }, [tl]);
 
   return (
     <StyledHero ref={(el) => (app = el)}>
