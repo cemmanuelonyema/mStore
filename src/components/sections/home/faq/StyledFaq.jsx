@@ -19,4 +19,25 @@ export const StyledFaq = styled.section`
       }
     }
   }
+
+  .question {
+    &__group {
+      padding: 1.6rem;
+      border: 1px solid black;
+    }
+
+    &__header {
+      background-color: black;
+      color: #fff;
+    }
+
+    &__content {
+      background-color: red;
+    }
+    ///////
+    &__group.open &__header {
+      background-color: yellow;
+      color: green;
+    }
+  }
 `;
