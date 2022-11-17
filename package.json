@@ -2,7 +2,18 @@
   "name": "menstore",
   "version": "1.0.0",
   "main": "index.js",
-  "repository": "https://github.com/cemmanuelonyema/mStore",
+  "repository": "htyartps://github.com/cemmanuelonyema/mStore",
   "author": "cemmanuelonyema <cemmanuelonyema@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.20.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "stripe": "^11.0.0"
+  },
+  "devDependencies": {
+    "concurrently": "^7.5.0",
+    "nodemon": "^2.0.20"
+  }
 }
