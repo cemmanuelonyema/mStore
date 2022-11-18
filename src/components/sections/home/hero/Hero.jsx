@@ -120,13 +120,13 @@ export const Hero = () => {
             <div className="images__inner" ref={(el) => (images = el)}>
               <div className="image-box image-box--1">
                 <img
-                  src="/public/img/suits/janko-ferlic-G-jo31ESuRE-unsplash.jpg"
+                  src="/img/suits/janko-ferlic-G-jo31ESuRE-unsplash.jpg"
                   alt=""
                 />
               </div>
               <div className="image-box  image-box--2">
                 <img
-                  src="/public/img/suits/khalid-boutchich-wS1k0VzXVrA-unsplash.jpg"
+                  src="/img/suits/khalid-boutchich-wS1k0VzXVrA-unsplash.jpg"
                   alt=""
                 />
               </div>
