@@ -93,7 +93,7 @@ export const Hero = () => {
     <StyledHero ref={(el) => (app = el)}>
       <div className="hero__container">
         <Content>
-          <div className="content__inner" ref={(el) => (content = el)}>
+          <div className="content__container" ref={(el) => (content = el)}>
             <h1>
               <div className="line">
                 <span>Relieveing the burden of</span>
@@ -115,20 +115,18 @@ export const Hero = () => {
             </button>
           </div>
         </Content>
-        <Images>
-          <div className="images__inner" ref={(el) => (images = el)}>
-            <div className="image-box image-box--1">
-              <img
-                src="/public/img/suits/janko-ferlic-G-jo31ESuRE-unsplash.jpg"
-                alt=""
-              />
-            </div>
-            <div className="image-box  image-box--2">
-              <img
-                src="/public/img/suits/khalid-boutchich-wS1k0VzXVrA-unsplash.jpg"
-                alt=""
-              />
-            </div>
+        <Images ref={(el) => (images = el)}>
+          <div className="image-box image-box--1">
+            <img
+              src="/public/img/suits/janko-ferlic-G-jo31ESuRE-unsplash.jpg"
+              alt=""
+            />
+          </div>
+          <div className="image-box  image-box--2">
+            <img
+              src="/public/img/suits/khalid-boutchich-wS1k0VzXVrA-unsplash.jpg"
+              alt=""
+            />
           </div>
         </Images>
       </div>
