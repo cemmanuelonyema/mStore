@@ -92,29 +92,33 @@ export const Hero = () => {
   return (
     <StyledHero ref={(el) => (app = el)}>
       <div className="hero__container">
-        <Content>
-          <div className="content__container" ref={(el) => (content = el)}>
-            <h1>
-              <div className="line">
-                <span>Relieveing the burden of</span>
-              </div>
-              <div className="line">
-                <span>lack of premium wears </span>
-              </div>
-              <div className="line">
-                <span>for men</span>
-              </div>
-            </h1>
-            <p>
-              Lorem jhskhdbjsn nsn hsmn jjs jj Lorem ipsum dolor sit, amet
-              consectetur adipisicing elit. Minus, doloremque!
-            </p>
-            <button>
-              Explore
-              <span> ➡️ </span>
-            </button>
-          </div>
-        </Content>
+       
+          <Content>
+            <div className="content__inner" ref={(el) => (content = el)}>
+              <h1>
+                <div className="line">
+                  <span>Relieveing the burden of</span>
+                </div>
+                <div className="line">
+                  <span>lack of premium wears </span>
+                </div>
+                <div className="line">
+                  <span>for men</span>
+                </div>
+              </h1>
+              <p>
+                Lorem jhskhdbjsn nsn hsmn jjs jj Lorem ipsum dolor sit, amet
+                consectetur adipisicing elit. Minus, doloremque!
+              </p>
+              <button>
+                Explore
+                <span> ➡️ </span>
+              </button>
+            </div>
+          </Content>
+         
+
+      
         <Images ref={(el) => (images = el)}>
           <div className="image-box image-box--1">
             <img
