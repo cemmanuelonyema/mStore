@@ -13,10 +13,7 @@ export const Home = () => {
       <Hero />
       <About />
       <Collections />
-      <Featured />
       <Newsletter />
-      <Faq />
-      <Contact />
     </Fragment>
   );
 };
