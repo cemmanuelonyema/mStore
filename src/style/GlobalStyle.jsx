@@ -35,6 +35,7 @@ button{
   border: none;
   outline: none;
   cursor: pointer;
+  background-color: transparent;
 }
 
 ul{
