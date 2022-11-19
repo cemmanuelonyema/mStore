@@ -31,14 +31,23 @@ export const StyledHero = styled.section`
 
 export const Content = styled.div`
   width: 50%;
+
   @media screen and (max-width: 37.5em) {
     width: 100%;
   }
-  .content__container {
-    max-width: 400px;
+
+  .content__inner {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 2rem;
+
+    button {
+      display: inline-flex;
+    }
+  }
+
+  .content__container {
+    max-width: 400px;
     margin: 0 auto;
 
     h1 {
