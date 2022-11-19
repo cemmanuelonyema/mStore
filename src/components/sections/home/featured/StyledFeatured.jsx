@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 
 export const StyledFeatured = styled.section`
-  border: 1px solid black;
   padding: 1rem;
 
   .container {

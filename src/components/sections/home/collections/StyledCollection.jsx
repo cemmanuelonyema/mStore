@@ -12,51 +12,30 @@ export const StyledCollections = styled.section`
 
     .cols-content {
       display: grid;
-      grid-template-columns: repeat(6, minmax(min-content, 120rem));
-      grid-template-rows: 25rem 25rem;
+      grid-template-columns: repeat(3, 1fr);
       gap: 2rem;
 
       @media screen and (max-width: 37.5em) {
-        display: flex;
-        flex-direction: column;
+        grid-template-columns: 1fr;
       }
     }
 
     .col-box {
-      position: relative;
+      display: flex;
+      flex-direction: column;
+      gap: 0.8rem;
 
-      button {
-        width: 100%;
-        padding: 1.6rem;
-        background-color: black;
-        color: white;
-        font-weight: bold;
-        position: absolute;
-        bottom: 30px;
-        left: 0;
-        opacity: 0;
-        z-index: 10;
-        transition: all 0.3s;
-        transform: translateY(1.6rem);
-      }
       &:hover {
         button {
-          transform: translateY(0px);
-          opacity: 1;
+          gap: 2rem;
         }
       }
 
-      &--1 {
-        grid-column: 1/4;
-        grid-row: 1/3;
-      }
-
-      &--2 {
-        grid-column: 4/7;
-      }
-
-      &--3 {
-        grid-column: 4/7;
+      button {
+        display: inline-flex;
+        gap: 1rem;
+        padding: 1.6rem 0;
+        transition: all 0.6s;
       }
     }
   }

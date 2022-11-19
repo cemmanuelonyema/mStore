@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { FaArrowRight } from 'react-icons/fa';
 import { StyledCollections } from './StyledCollection';
 
 export const Collections = () => {
@@ -24,7 +25,10 @@ export const Collections = () => {
           {colData.map(({ img, id, link }) => (
             <Link className={`col-box col-box--${id}`} key={id} to={link}>
               <img src={img} alt="collection image" />
-              <button>View collection </button>
+              <button>
+                <span>View collection</span>
+                <FaArrowRight />
+              </button>
             </Link>
           ))}
         </div>
