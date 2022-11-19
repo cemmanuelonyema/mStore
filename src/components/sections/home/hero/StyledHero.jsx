@@ -2,35 +2,48 @@ import styled from 'styled-components';
 
 export const StyledHero = styled.section`
   border: 1px solid black;
-  margin-top: 10rem;
-  /* padding-top: 25rem; */
+  margin-top: 7rem;
   visibility: hidden;
 
-  .container {
-    max-width: 120rem;
-    margin: 0 auto;
-    padding: 3rem;
+  @media screen and (max-width: 37.5em) {
+    margin-top: 10rem;
   }
 
-  .hero__inner {
+  .hero__container {
+    max-width: 120rem;
+    height: 90vh;
+    min-height: 70vh;
+    margin: 0 auto;
+    padding: 0 3rem;
+
     display: flex;
-    align-items: center;
     justify-content: space-between;
-    margin: 0 24px;
-    /* height: 100vh; */
+    align-items: center;
+    gap: 6.4rem;
+
+    @media screen and (max-width: 37.5em) {
+      flex-direction: column;
+      padding-top: 6rem;
+      gap: 2.4rem;
+    }
   }
 `;
 
 export const Content = styled.div`
   width: 50%;
-  .content__inner {
-    width: 400px;
+  @media screen and (max-width: 37.5em) {
+    width: 100%;
+  }
+  .content__container {
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
     margin: 0 auto;
 
     h1 {
       font-weight: bold;
       font-size: 3.2rem;
-      margin-bottom: 2.4rem;
     }
 
     .line {
@@ -45,7 +58,6 @@ export const Content = styled.div`
       font-weight: 300;
       line-height: 24px;
       font-size: 14px;
-      margin-bottom: 50px;
     }
 
     button {
@@ -67,9 +79,11 @@ export const Content = styled.div`
 `;
 export const Images = styled.div`
   width: 50%;
-  height: 100vh;
+  height: 100%;
   position: relative;
-  .images__inner {
+
+  @media screen and (max-width: 37.5em) {
+    width: 100%;
   }
 
   .image-box {
@@ -77,14 +91,17 @@ export const Images = styled.div`
     position: absolute;
 
     &--1 {
-      top: 0px;
+      top: 5rem;
       right: 0px;
       width: 45%;
       height: 50%;
+      @media screen and (max-width: 37.5em) {
+        top: 0px;
+      }
     }
 
     &--2 {
-      bottom: 24px;
+      bottom: 5rem;
       left: 0px;
       width: 52%;
       height: 60%;
